@@ -1,0 +1,20 @@
+body {
+  background: #f8f9fa;
+}
+.signature-container {
+  background: #fff;
+  padding: 50px;
+}
+
+.btn-copy {
+  margin-top: 20px;
+  background: #2f8d43;
+}
+
+.btn-copy:hover {
+  background: #296c22;
+}
+
+.alert {
+  display: none
+}

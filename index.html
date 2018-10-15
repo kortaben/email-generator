@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <style>
+    @import url("https://use.typekit.net/qfj2jlh.css");
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>vChain - Signature generator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/qfj2jlh.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+  <style type="text/css">
+  	::selection{
+  		background: transparent;
+  	}
+  </style>
+
+  <body id="page-top">
+
+
+
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+      <div class="container">
+
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <h2 class="mb-5">The <img src="img/vchain-logo.png" style="height:24px; width:auto;"> email signature generator!</h2>
+
+        </div>
+
+        <!-- Featured Project Row -->
+        <div class="row align-items-left mb-4 mb-lg-5">
+          <div class="col-xl-6 col-lg-6">
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">First name</label>
+                <input type="text" class="form-control" id="fn" oninput="changefirstname()" value="Erik">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Last name</label>
+                <input type="text" class="form-control" id="ln" oninput="changelastname()" value="Eriksson">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Title</label>
+                <input type="text" class="form-control" id="title" oninput="changetitle()" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Email</label>
+                <input type="text" class="form-control" id="email" oninput="changeemail()" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Phone</label>
+                <input type="text" class="form-control phone-mask" id="phone" oninput="changephone()" placeholder="+">
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="text-center text-lg-left">
+              <div class="signature-container">
+              <div class="signature-box" id="sb" style="font-size:12px; letter-spacing:0;">
+                <style>
+                @import url("https://use.typekit.net/qfj2jlh.css");
+                </style>
+                <div class="regards" id="regards" style="font-family:helvetica,sans-serif; ">Best regards,</div>
+                <table style="border:0;">
+                  <tr>
+                    <td>
+                      <div id="firstname" style="font-family:helvetica,sans-serif;font-weight: 700;">Erik</div>
+                    </td>
+                    <td>
+                      <div id="lastname" style="font-family:helvetica,sans-serif;font-weight: 700;">Eriksson</div>
+                    </td>
+                  </tr>
+                </table>
+                <div id="title-field" style="font-family:helvetica,sans-serif;"></div>
+                <div id="company" style="font-family:helvetica,sans-serif; color:#2f8d43;font-weight: 700;">vChain</div>
+                <div style="font-family:helvetica,sans-serif; text-transform: uppercase;font-weight: 700;">Empowering your supplybility</div>
+                <table style="font-family:helvetica,sans-serif; border:0; text-decoration: none; color:#000;">
+                  <tr>
+                    <td>
+                      <div id="emailchanging"><a href="mailto:erik.eriksson@vchain.se" style="font-family:helvetica,sans-serif;  text-decoration: none; color:#000;">erik.eriksson@vchain.se</a></div>
+                    </td>
+                    <td style=" padding-left:5px; padding-right:5px;">
+                      |
+                    </td>
+                    <td>
+                      <div id="phonechanging"><a href="tel:+46 444 888888" style="font-family:helvetica,sans-serif;  text-decoration: none; color:#000;">+46 444 888888</a></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+              <div class="text-center text-lg-left">
+                <a href="#generator" class="btn btn-primary btn-block btn-copy js-scroll-trigger" onclick="copyfunction('sb')">Kopiera signatur <i class="far fa-copy"></i></a>
+          </div>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <strong>Signaturen är kopierad!</strong> <i class="far fa-thumbs-up"></i><br>Klistra in den som en signatur i din mailklient för att börja använda den.
+</div>
+        </div>
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-9 col-lg-9">
+
+          </div>
+          <div class="col-xl-3 col-lg-3">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="small text-center ">
+      <div class="container">
+        Copyright &copy; vChain
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $('.phone-mask').mask('+00 000 000000');
+    });
+    function copyfunction(sb) {
+    if (document.selection) { // IE
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(sb));
+
+        range.select();
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(document.getElementById(sb));
+
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+    }
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+
+  }
+	  function changefirstname(){
+	    document.getElementById("firstname").innerHTML=document.getElementById("fn").value;
+	  }
+	  function changelastname(){
+	    document.getElementById("lastname").innerHTML=document.getElementById("ln").value;
+	  }
+	    function changetitle(){
+	    document.getElementById("title-field").innerHTML=document.getElementById("title").value;
+	  }
+	    function changeemail(){
+	    document.getElementById("emailchanging").innerHTML=document.getElementById("email").value;
+	  }
+	  function changephone(){
+	    document.getElementById("phonechanging").innerHTML=document.getElementById("phone").value;
+	  }
+
+    </script>
+
+    <script>
+$(document).ready(function(){
+    $(".btn").click(function(){
+        $(".alert").show();
+        $('.alert').delay(10000).fadeOut();
+    });
+});
+</script>
+
+  </body>
+
+</html>
